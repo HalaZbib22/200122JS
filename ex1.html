@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Leap Year</title>
+  </head>
+  <body>
+    <center>
+      <h1>Leap Year</h1>
+      <p>
+        A normal year has 365 days. <br />
+        A Leap Year has 366 days (the extra day is the 29th of February). <br />
+        <img src="Assets/thumbsup.png" alt="Thumbs Up!" />
+      </p>
+    </center>
+
+    <script>
+      function LeapYear() {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+          alert(`${year} is a leap year!`);
+        } else {
+          alert(`${year} isn't a leap year!`);
+        }
+      }
+
+      var year = prompt("Enter a Year from 1582 onwards: ");
+      LeapYear();
+    </script>
+  </body>
+</html>
