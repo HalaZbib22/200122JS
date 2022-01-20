@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>BMI</title>
+</head>
+
+<body>
+    <div>
+        <p>
+        <h1>BMI Calculator</h1>
+        <h3 id="height">
+            Height =
+        </h3>
+        <h3 id="weight">
+            Weight =
+        </h3>
+            <b><h3 id="BMI">
+                BMI =
+            </h3></b>
+        </p>
+    </div>
+    <script>
+
+        function BMIcal() {
+            return ((w) / ((h * h) / 10000)).toFixed(2);
+        }
+
+        var h = prompt("Enter your height (cm): ");
+        var w = prompt("Enter your weight (kg): ");
+        document.getElementById("height").innerHTML = "Height = " + h + " cm";
+        document.getElementById("weight").innerHTML = "Weight = " + w + " kg";
+
+        document.getElementById("BMI").innerHTML = "BMI = " + BMIcal()
+
+    </script>
+</body>
+
+</html>
