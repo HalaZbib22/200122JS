@@ -1,11 +1,46 @@
 <html>
-    <head>
-        <title>Exercise 3</title>
-    </head>
+  <head>
+    <title>Exercise 3</title>
+  </head>
 
-    <body>
-        <script>
-            
-        </script>
-    </body>
+  <body>
+    <script>
+      function Once(arr, n) {
+        // Sort the array
+        arr.sort();
+       
+        // find the min frequency using
+        // linear traversal
+        let min = n+1, answer = -1;
+        let count = 1;
+           
+        for (let i = 1; i < n; i++) {
+            if (arr[i] == arr[i - 1])
+                count++;
+            else {
+                if (count < min) {
+                    min = count;
+                    answer = arr[i - 1];
+                }
+                   
+                count = 1;
+            }
+        }
+       
+        // If last element is least frequent
+        if (count < min)
+        {
+            min = count;
+            answer = arr[n - 1];
+        }
+       
+        return answer;
+    }
+
+
+      let arr = [4,3,2,1,1,2,3];
+      let n = arr.length;
+      console.log(Once(arr,n))
+    </script>
+  </body>
 </html>
